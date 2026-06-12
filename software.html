@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Software — Kyle Onda</title>
-<meta name="description" content="Open-source software and data infrastructure projects by Kyle Onda: Geoconnex, Internet of Water tools, and OGC standards work.">
+<title>Projects &amp; Software — Kyle Onda</title>
+<meta name="description" content="Projects led by Kyle Onda as Principal Investigator (Western Water Datahub, Arizona Water Observatory, Geoconnex) and open-source software (edr4r).">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,22 +16,42 @@
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="publications.html">Publications</a>
-      <a href="software.html" class="active">Software</a>
+      <a href="software.html" class="active">Projects &amp; Software</a>
     </div>
   </div>
 </nav>
 
 <header class="page-title container">
-  <h1>Software &amp; Data Infrastructure</h1>
+  <h1>Projects &amp; Software</h1>
   <p>Most of my work is open source, under the <a href="https://github.com/internetofwater">@internetofwater</a> and <a href="https://github.com/cgs-earth">@cgs-earth</a> GitHub organizations.</p>
 </header>
 
 <main class="container">
 
 <section>
+  <h2>Projects <small>data infrastructure I lead as Principal Investigator</small></h2>
 
   <div class="card">
-    <p class="meta">Open standard &middot; persistent identifiers &middot; knowledge graph</p>
+    <p class="meta"><span class="tag pi">Principal Investigator</span><span class="tag">OGC APIs</span><span class="tag">pygeoapi</span><span class="tag">reservoir &amp; snow data</span></p>
+    <h3>Western Water Datahub</h3>
+    <p>A unified OGC API interface to water data that matters for western U.S. water supply: reservoir storage and releases (Bureau of Reclamation RISE, USACE), snowpack (NRCS SNOTEL), streamflow observations and forecasts (USGS, AWDB, NOAA River Forecast Centers), and gridded precipitation (NOAA, PRISM) &mdash; consolidated behind standard Features and Environmental Data Retrieval endpoints. A collaboration between the U.S. Bureau of Reclamation, CGS/Internet of Water, and the Western States Water Council.</p>
+    <div class="card-links">
+      <a href="https://wwdh.internetofwater.app">wwdh.internetofwater.app</a>
+      <a href="https://github.com/internetofwater/Western-Water-Datahub">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="meta"><span class="tag pi">Principal Investigator</span><span class="tag">OGC APIs</span><span class="tag">remote sensing</span><span class="tag">groundwater</span></p>
+    <h3>Arizona Water Observatory</h3>
+    <p>A statewide water data platform built with Arizona State University: a React/Mapbox front end over a pygeoapi back end serving OGC API Features, EDR, and Maps. Integrates Arizona Department of Water Resources groundwater wells, federal monitoring networks (USACE, SNOTEL, NOAA National Water Model), and satellite remote sensing of water storage and soil moisture (GRACE, SMAP), deployed on Google Cloud.</p>
+    <div class="card-links">
+      <a href="https://github.com/cgs-earth/ArizonaWaterObservatory">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="meta"><span class="tag">open standard</span><span class="tag">persistent identifiers</span><span class="tag">knowledge graph</span></p>
     <h3>Geoconnex</h3>
     <p>An open persistent identifier system and knowledge graph for hydrologic features in the United States. Geoconnex provides community-managed reference features (monitoring locations, mainstems, watersheds) with resolvable URIs and structured, linked metadata &mdash; making water data published by federal agencies, states, tribes, and utilities discoverable and interoperable. I designed the original architecture and lead its continued development and federal adoption.</p>
     <div class="card-links">
@@ -41,7 +62,7 @@
   </div>
 
   <div class="card">
-    <p class="meta">Open-source tooling &middot; OGC APIs</p>
+    <p class="meta"><span class="tag">open-source tooling</span><span class="tag">SensorThings</span></p>
     <h3>Internet of Water tools</h3>
     <p>A suite of open-source components for publishing and integrating water data: reference feature servers built on pygeoapi and OGC API standards, SensorThings API deployments linking hydrologic features to environmental sensor data streams, harvesting and ETL pipelines, and dashboards.</p>
     <div class="card-links">
@@ -49,9 +70,26 @@
       <a href="https://github.com/internetofwater">GitHub organization</a>
     </div>
   </div>
+</section>
+
+<section>
+  <h2>Software <small>tools I write and maintain</small></h2>
 
   <div class="card">
-    <p class="meta">Standards &middot; interoperability</p>
+    <p class="meta"><span class="tag">R package</span><span class="tag">OGC API&ndash;EDR</span><span class="tag">MIT</span></p>
+    <h3>edr4r</h3>
+    <p>An R client for any service speaking OGC API &mdash; Environmental Data Retrieval, built for in-situ monitoring networks: stream gauges, weather stations, snow telemetry, reservoirs. It handles the tedious parts (URL construction, WKT encoding, retries, content negotiation) and returns tidy data &mdash; CoverageJSON becomes a long tibble, GeoJSON becomes sf &mdash; with one-call plotting, interactive station maps, and exploratory snapshots. Works out of the box against the USGS waterdata OGC API and the Western Water Datahub.</p>
+    <div class="card-links">
+      <a href="https://github.com/ksonda/edr4r">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Standards &amp; consulting</h2>
+
+  <div class="card">
+    <p class="meta"><span class="tag">interoperability</span><span class="tag">co-chair</span></p>
     <h3>OGC Water Quality Interoperability Experiment</h3>
     <p>Co-chaired an Open Geospatial Consortium initiative testing how water quality observation data can be exchanged across systems using OGC standards, with participants from government agencies and industry internationally.</p>
     <div class="card-links">
@@ -60,11 +98,10 @@
   </div>
 
   <div class="card">
-    <p class="meta">Analytics &middot; proprietary</p>
+    <p class="meta"><span class="tag">analytics</span><span class="tag">proprietary</span></p>
     <h3>Water Equity Lens (Xylem)</h3>
     <p>A metrics suite for water and wastewater utilities to evaluate the spatial and social equity of their service delivery, visualized in ArcGIS Online. Designed the data models and ingestion pipelines integrating utility operational data with U.S. Census data for pilot deployments with client utilities.</p>
   </div>
-
 </section>
 
 </main>
